@@ -43,32 +43,15 @@ The insights from this decomposition are used to inform further modeling and for
 
 ![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/8fe9df39-ee0a-47c8-84d8-840a9857c304)
 
-### 2. Response Time Optimization ⏱️
-**Objective**: Determine the factors affecting response times to optimize them.
-**Method**: Investigate the correlation between response times and variables such as time of day and incident type using SQL, complemented by advanced regression analysis.
-
-
-### 4. Resource Allocation Analysis 🚒
+### 2. Resource Allocation Analysis 🚒
 **Objective**: Optimize the distribution of firefighting resources.
 **Method**: Analyze incident frequencies by station in SQL and match against resource data to recommend allocations.
 
-### 5. Incident Duration Analysis ⏳
-**Objective**: Explore the factors that influence the length of incidents.
-**Method**: Calculate and analyze incident durations using SQL to find patterns and anomalies.
-
-### 6. Seasonal and Weather Impact Analysis ☀️❄️
-**Objective**: Evaluate the effect of seasonal changes and weather on incident rates.
-**Method**: Integrate weather data using SQL JOINs and analyze its correlation with incident patterns.
-
-### 7. Predictive Modeling for Incident Types 🧠
+### 3. Predictive Modeling for Incident Types 🧠
 **Objective**: Predict specific types of fire incidents.
 **Method**: Perform feature engineering using SQL and apply machine learning classifiers to predict incident types.
 
-### 8. Text Analysis of Incident Descriptions 📝
-**Objective**: Derive insights from the textual descriptions of incidents.
-**Method**: Use SQL for initial text aggregation and Python for advanced text analysis techniques like NLP.
-
-### 9. Comparative Analysis Across Years 📅
+### 4. Comparative Analysis Across Years 📅
 **Objective**: Compare incident trends over different years.
 **Method**: Extract and compare yearly data using SQL to spot trends and changes over time.
 
