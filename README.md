@@ -18,7 +18,7 @@ Our dataset `fire_incidents.csv` is a comprehensive log of fire incidents, metic
 - `Date`: Timestamp for each logged incident.
 - `IncidentCount`: The tally of incidents on the given date.
 
-- SQL Query to extract the data from the main database: `monthly_incident_count.sql`
+- [SQL Query] (`monthly_incident_count.sql`)
 
 SELECT 
     FORMAT(CONVERT(datetime, Date, 103), 'yyyy-MM') as Month, 
