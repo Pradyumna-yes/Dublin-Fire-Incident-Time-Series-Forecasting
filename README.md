@@ -6,11 +6,6 @@ Welcome to the _Fire Incident Time Series Forecasting_ repository, where we pred
 
 This project is an analytical deep dive into the historical data of fire incidents. Our mission is to uncover patterns, understand the trends, and predict the future of fire incident occurrences using time series analysis techniques.
 
-Our dataset `fire_incidents.csv` is a comprehensive log of fire incidents, meticulously recorded with the following structure:
-
-- `Date`: Timestamp for each logged incident.
-- `IncidentCount`: The tally of incidents on the given date.
-
 ## Analyses Overview
 
 Each analysis within this project serves a specific purpose and utilizes a range of data processing and statistical techniques:
@@ -18,14 +13,47 @@ Each analysis within this project serves a specific purpose and utilizes a range
 ### 1. Time Series Forecasting 📈
 **Objective**: Forecast future fire incident counts.
 **Method**: Aggregate data into a time series format and apply ARIMA modeling, potentially integrating with tools like R or Python for advanced statistical processing.
+Our dataset `fire_incidents.csv` is a comprehensive log of fire incidents, meticulously recorded with the following structure:
+
+- `Date`: Timestamp for each logged incident.
+- `IncidentCount`: The tally of incidents on the given date.
+
+- SQL Query to extract the data from the main database
+SELECT 
+    FORMAT(CONVERT(datetime, Date, 103), 'yyyy-MM') as Month, 
+    COUNT(*) as IncidentCount 
+FROM Incidents 
+GROUP BY FORMAT(CONVERT(datetime, Date, 103), 'yyyy-MM') 
+ORDER BY Month;
+
+
+The included decomposition plot provides a visual breakdown of the fire incident counts into three distinct components:
+
+- **IncidentCount**: The original time series graph shows the monthly incident counts. It reflects the raw data without any alterations, capturing all the fluctuations and patterns as they are recorded.
+
+- **Trend**: This subplot displays the trend component extracted from the original data. The trend represents the long-term progression of the incident counts, showing a smoother line that highlights increases or decreases over time. It's a way to visualize the underlying direction that the data is moving, apart from the seasonal effects and random fluctuations.
+
+- **Seasonal**: Here, the seasonal component is shown, revealing the regular pattern that repeats over time within the data. This can correspond to days of the week, months, or any other cyclical interval that influences incident counts. The plot indicates the consistent fluctuations that could be tied to specific seasonal events or conditions.
+
+- **Resid**: The residual plot shows the irregularities or noise left after the trend and seasonal components have been removed from the original data. These residuals can include random and irregular influences or point to variations that the model hasn't captured.
+
+### Analysis Outcomes 📝
+
+The decomposition of the time series data is a critical step in our analysis, allowing us to:
+
+- Understand the underlying patterns of fire incidents.
+- Identify if there is a significant trend indicating an increase or decrease in incidents over time.
+- Detect any seasonality that can inform preventive measures and resource allocation.
+- Examine the residuals to check the goodness of fit for our time series model and identify any anomalies.
+
+The insights from this decomposition are used to inform further modeling and forecasting, aiming to accurately predict future incidents and assist in strategic planning and readiness.
+
+![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/8fe9df39-ee0a-47c8-84d8-840a9857c304)
 
 ### 2. Response Time Optimization ⏱️
 **Objective**: Determine the factors affecting response times to optimize them.
 **Method**: Investigate the correlation between response times and variables such as time of day and incident type using SQL, complemented by advanced regression analysis.
 
-### 3. Hotspot Analysis 📍
-**Objective**: Identify geographic areas with frequent incidents.
-**Method**: Use spatial SQL queries to locate hotspots and employ GIS tools for visualization.
 
 ### 4. Resource Allocation Analysis 🚒
 **Objective**: Optimize the distribution of firefighting resources.
