@@ -6,6 +6,11 @@ Welcome to the _Fire Incident Time Series Forecasting_ repository, where we pred
 
 This project is an analytical deep dive into the historical data of fire incidents. Our mission is to uncover patterns, understand the trends, and predict the future of fire incident occurrences using time series analysis techniques.
 
+Our dataset `fire_incidents.csv` is a comprehensive log of fire incidents, meticulously recorded with the following structure:
+
+- `Date`: Timestamp for each logged incident.
+- `IncidentCount`: The tally of incidents on the given date.
+
 ## Analyses Overview
 
 Each analysis within this project serves a specific purpose and utilizes a range of data processing and statistical techniques:
