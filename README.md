@@ -47,11 +47,6 @@ The insights from this decomposition are used to inform further modeling and for
 
 ![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/56b31d32-33e5-420c-a4d8-35f1e0f2a4e4)
 
-
-### 2. Resource Allocation Analysis 🚒
-**Objective**: Optimize the distribution of firefighting resources.
-**Method**: Analyze incident frequencies by station in SQL and match against resource data to recommend allocations.
-
 ### 3. Predictive Modeling for Incident Types 🧠
 **Objective**: Predict specific types of fire incidents.
 **Method**: Perform feature engineering using SQL and apply machine learning classifiers to predict incident types.
