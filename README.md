@@ -47,13 +47,27 @@ The insights from this decomposition are used to inform further modeling and for
 
 ![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/56b31d32-33e5-420c-a4d8-35f1e0f2a4e4)
 
-### 3. Predictive Modeling for Incident Types 🧠
-**Objective**: Predict specific types of fire incidents.
-**Method**: Perform feature engineering using SQL and apply machine learning classifiers to predict incident types.
-
-### 4. Comparative Analysis Across Years 📅
+### 2. Comparative Analysis Across Years 📅
 **Objective**: Compare incident trends over different years.
-**Method**: Extract and compare yearly data using SQL to spot trends and changes over time.
+**Methods:** conduct a comparative analysis of fire incidents reported in Dublin from 2020 to 2022. By examining the data, we seek to identify trends, distributions, and changes in the frequency and types of fire incidents over the three years. The analysis involves data preprocessing, exploratory data analysis (EDA), and visualization to uncover insights into the fire incident patterns.
+
+ -[`Python Code`](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/blob/main/Python%20Code/Comparative_Analysis_.ipynb)
+
+1. Total Number of Fire Incidents per Year
+This bar chart presents the total number of fire incidents reported in each year from 2020 to 2022. The visualization aims to provide a clear view of the annual incident volume, enabling a straightforward comparison across the years.
+
+Outcome:
+A slight decrease in the total number of incidents can be observed over the three years. This trend suggests an improvement in fire safety and/or response effectiveness, or possibly other factors contributing to a reduction in reported fire incidents.
+![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/8a9e9e03-5eb2-4ca4-acd0-9318cc449355)
+
+
+2. Number of Incidents per Fire Station per Year
+The heatmap provides a visual representation of the number of incidents handled by each fire station in each year. The color intensity indicates the volume of incidents, with darker colors representing higher numbers of incidents.
+
+Outcome:
+This visualization allows for the identification of patterns or outliers in the data, such as fire stations with consistently high activity levels or significant year-to-year changes. It can highlight where resources are most demanded and inform resource allocation or preventive measures in areas with rising incident counts.
+
+![image](https://github.com/Pradyumna-yes/Dublin-Fire-Incident-Time-Series-Forecasting/assets/96283346/f64d2609-1f17-4a4f-afb0-5303dc8d87cc)
 
 ## How to Use This Repository
 
@@ -61,11 +75,7 @@ Inside this repository, you'll find structured directories corresponding to each
 
 - Data processing scripts
 - Analytical notebooks
-- Visualization tools
-- Model files
-- Documentation for replication and extension
-
-## Contributing to the Project
+- Visualization tools## Contributing to the Project
 
 We welcome contributions that can enhance the project's analyses or introduce new perspectives:
 
@@ -82,24 +92,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Questions and Contact
 
 Have a question or suggestion? Please [open an issue](https://github.com/your_username/Fire-Incident-Analysis-Project/issues) to get in touch.
-
-
-
-## 👐 Contributing
-
-Got an idea to enhance the predictions? We welcome your insights and contributions:
-
-1. Fork the project.
-2. Branch out (`git checkout -b feature/YourAmazingFeature`).
-3. Commit (`git commit -m 'Add some YourAmazingFeature'`).
-4. Push (`git push origin feature/YourAmazingFeature`).
-5. Create a new Pull Request.
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 📬 Contact
-
-Questions, comments, cakes, and critiques – [open an issue](https://github.com/your_username/Fire-Incident-Time-Series-Forecasting/issues) and let's chat!
-
